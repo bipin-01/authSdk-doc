@@ -1,0 +1,24 @@
+# CREATING BY ATTACHING ROLE / POLICY / PERMISSION
+
+policyid, permissionid and roleid are optional arguments you can pass to the respective methods to create by attaching policy, permission and role respectively.
+
+``` javascript
+
+const roleWithPolicy = await role.create({ 
+ name: "SE",
+ policyid: ["1", "2"]
+})
+
+const permissionWithPolicy = await permission.create({
+  resource: "task",
+  action: "read",
+  permissionid: ["1", "2"]
+});
+
+const policyWithPermission = await policy.createWithAllowOrDeny({
+  name: "task-author",
+  kind: "ALLOW",
+  permissionid: ["1", "2"]
+});
+
+```

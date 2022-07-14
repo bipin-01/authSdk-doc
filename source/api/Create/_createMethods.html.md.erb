@@ -1,0 +1,15 @@
+# Create Methods
+
+``` javascript  
+const role = await role.create({ name: "ASE" });
+
+const permission = await permission.create({
+  resource: "task",
+  action: "create",
+});
+
+const policy = await policy.createWithAllowOrDeny({
+  name: "task-author",
+  kind: "ALLOW"
+});
+```

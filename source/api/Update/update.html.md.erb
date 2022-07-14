@@ -1,0 +1,21 @@
+# Update Method
+
+The first argument should be the id of what you want to update, followed by the data to be updated with.
+
+``` javascript
+
+const updatedRole = await role.update(id, { 
+ name: "ASE"
+})
+
+const updatedPermission = await permission.update(id, { 
+ resource: "task",
+ action: "read"
+})
+
+const updatedPolicy = await role.updateWithAllowOrDeny(id, { 
+ name: "task-author",
+ kind: "ALLOW"
+})
+
+```
